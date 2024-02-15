@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SearchResult() {
+function SearchForm() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function SearchResult() {
   )
 }
 
-export default SearchResult
+export default SearchForm

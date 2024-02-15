@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import SingleCard from './components/SingleCard'
+import SingleCard from './components/SingleCardResult'
 
 function App() {
   const [count, setCount] = useState(0)

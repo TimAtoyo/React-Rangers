@@ -13,8 +13,7 @@
 import axios from 'axios';
 
 const options = {
-  method: 'GET',
-  url: 'https://api.themoviedb.org/3/search/movie',
+  
   params: {query: 'matrix', include_adult: 'false', language: 'en-US', page: '1'},
   headers: {
     accept: 'application/json',
@@ -22,18 +21,20 @@ const options = {
   }
 };
 
-axios
-  .request(options)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+
 // Export an object with a "search" method that searches the Giphy API for the passed query
 export default 
 {
-  search: function(query) {
-    return axios.get(BASEURL + query + APIKEY);
+  search: function(queryString) {
+    return axios.request({
+    method: 'GET',
+    url: 'https://api.themoviedb.org/3/search/movie',
+    params: {
+        query: queryString, 
+        include_adult: 'false',
+        language: 'en-US', 
+        page: '1'},
+
+})
   }
 };
