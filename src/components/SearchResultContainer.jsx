@@ -15,7 +15,7 @@ function SearchResultContainer() {
       // console.log(res.data.results[0]);
       setSearchData({ 
       ...searchData, 
-      results: res.data.results[0] })})
+      results: (res.data.results[0]) ? res.data.results[0] : '' })})
   }
 
   // searchMovie('matrix', 'true')
