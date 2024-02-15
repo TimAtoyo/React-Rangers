@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <div className='nav'>
-        <a>test</a>
-    </div>
+    <nav className='nav'>
+        <NavLink to="/">ReactRangers</NavLink>
+    </nav>
   )
 }
 
