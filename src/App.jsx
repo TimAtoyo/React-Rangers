@@ -2,15 +2,31 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import SearchResultContainer from './components/SearchResultContainer'
-// import Api from '../utils/Api'
+import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+
+const router = createBrowserRouter([
+  {
+    element: <Navbar />, 
+    children: [
+      {path: '/', 
+      element:  <SearchResultContainer />,
+    }
+    // ,
+    //   {path: '/filter', 
+    //   element:  <SearchByFilter />,
+    // }
+    ]
+  }
+])
+
 function App() {
-  const [count, setCount] = useState(0)
+
+
 
   return (
-    <>
-    <Navbar />
-    <SearchResultContainer />
-    </>
+    <main>
+    <RouterProvider router = {router} />
+    </main>
   )
 }
 
