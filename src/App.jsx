@@ -1,15 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import SingleCard from './components/SingleCardResult'
-
+import SearchResultContainer from './components/SearchResultContainer'
+// import Api from '../utils/Api'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-  <Navbar />
-  <SingleCard />
+    <Navbar />
+    <SearchResultContainer />
     </>
   )
 }
