@@ -1,7 +1,6 @@
 import React from 'react'
 
-function SingleCard() {
-
+function SearchResult() {
   return (
     <div>
       
@@ -9,4 +8,4 @@ function SingleCard() {
   )
 }
 
-export default SingleCard
+export default SearchResult
