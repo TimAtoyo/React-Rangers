@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import SingleCardResult from './SingleCardResult'
 import SearchForm from './SearchForm'
 import Api from '../utils/Api'
 
-function SearchResultContainer() {
+function Home() {
   const [searchData, setSearchData] = useState({
     search: '',
     results: []
@@ -50,4 +50,4 @@ function SearchResultContainer() {
   )
 }
 
-export default SearchResultContainer
+export default Home
