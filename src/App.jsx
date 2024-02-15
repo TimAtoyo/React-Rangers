@@ -1,33 +1,30 @@
-import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import SearchResultContainer from './components/SearchResultContainer'
-import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Home from './components/Home'
+
 
 const router = createBrowserRouter([
-  {
-    element: <Navbar />, 
+  { element:<Navbar />,
     children: [
       {
-        path: '/', 
-      element:  <SearchResultContainer />,
-    }
-    // ,
-    //   {path: '/filter', 
-    //   element:  <SearchByFilter />,
-    // }
+      path: '/', 
+      element: <Home />,}
+      // ,
+      // {
+      // path: '/', 
+      // element: <Home />,}
+
     ]
   }
+
 ])
 
 function App() {
-
-
-
   return (
-    <main>
-    <RouterProvider router = {router} />
-    </main>
+    <>
+    <RouterProvider router={router} />
+  </>
   )
 }
 
