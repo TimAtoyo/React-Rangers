@@ -8,7 +8,8 @@ const router = createBrowserRouter([
   {
     element: <Navbar />, 
     children: [
-      {path: '/', 
+      {
+        path: '/', 
       element:  <SearchResultContainer />,
     }
     // ,
