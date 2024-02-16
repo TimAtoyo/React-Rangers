@@ -13,7 +13,7 @@ export default
       params: {query:query, include_adult:include_adult, language: 'en-US', page: '1'},
       headers: {
         accept: 'application/json',
-        Authorization: `Bearer ${import.meta.env.SINGLE_SEARCH}`
+        Authorization: `Bearer ${import.meta.env.VITE_SINGLE_SEARCH}`
       }
     })
   }
