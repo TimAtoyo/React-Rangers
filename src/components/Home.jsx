@@ -27,15 +27,15 @@ function Home() {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
- console.log(event.target);
- console.log([name]);
+//  console.log(event.target);
+//  console.log([name]);
 
     setSearchData({
       ...searchData,
       [name]: value,
     });
   };
-
+// console.log(import.meta.env.VITE_SINGLE_SEARCH);
   const handleFormSubmit = (event) => {
     event.preventDefault();
     searchMovie(searchData.search);
