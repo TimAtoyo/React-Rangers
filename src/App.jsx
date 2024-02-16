@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       // ,
       // {
       // path: '/', 
-      // element: <Home />,}
+      // element: < />,}
 
     ]
   }
@@ -22,9 +22,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <main className='mx-auto'>
     <RouterProvider router={router} />
-  </>
+  </main>
   )
 }
 
