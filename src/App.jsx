@@ -3,6 +3,8 @@ import './App.css'
 import Navbar from './components/Navbar'
 import SearchResultContainer from './components/SearchResultContainer'
 // import Api from '../utils/Api'
+import Filters from './components/Filters'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -10,6 +12,7 @@ function App() {
     <>
     <Navbar />
     <SearchResultContainer />
+    <Filters />
     </>
   )
 }
