@@ -6,19 +6,37 @@
   --purple: #8B518C;
   --pink: #F288C2;
   --light-pink: #F2DCE8;
+  --white: #fff;
+  --another-one:#f791f8;
 }
 
 #root {
-  max-width: 1280px;
+  
   margin: 0 auto;
-  padding: 2rem;
+  padding-top: 1rem;
+  padding-inline:2rem;
   text-align: center;
+  height:100dvh;
+  background: linear-gradient(180deg, var(--dark-blue) 20%, var(  --another-one) 100%);
+  background: blur(57px);
+}
+
+.home {
+  max-width: 1280px;
 }
 
 .nav {
-  background-color: var(--dark-blue);
-  color: var(--pink);
-  height: 3rem;
+  max-width: 1280px;
   display: flex;
+  align-items:center;
   gap: 2rem;
+  height: 3rem;
+  font-weight:700;
+  padding-inline:1rem;
+  color:var(--white);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }

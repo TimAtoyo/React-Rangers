@@ -6,7 +6,8 @@ import Api from '../utils/Api'
 function Home() {
   const [searchData, setSearchData] = useState({
     search: '',
-    results: []
+    results: '', 
+    apiState: undefined
   })
 
   const searchMovie = ( queryString ,isAdultContent) => {
@@ -15,7 +16,11 @@ function Home() {
       // console.log(res.data.results[0]);
       setSearchData({ 
       ...searchData, 
-      results: (res.data.results[0]) ? res.data.results[0] : '' })})
+      results: (res.data.results[0]) ? res.data.results[0] : '' ,
+      apiState: res.data.results[0]
+    
+    }
+      )})
   }
 
   // searchMovie('matrix', 'true')
@@ -37,15 +42,19 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className='flex flex-col mx-auto justify-start home'>
       <SearchForm  
             search={searchData.search}
             handleFormSubmit={handleFormSubmit}
             handleInputChange={handleInputChange}
       />
-      <SingleCardResult 
-      results={searchData.results}
-      />
+      <div className='grid'>
+        <h3 className='text-left text-yellow-50'>Results:</h3>
+        <SingleCardResult
+        results={searchData.results}
+        apiState={searchData.apiState}
+        />
+      </div>
     </div>
   )
 }
