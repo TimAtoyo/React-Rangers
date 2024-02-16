@@ -10,7 +10,7 @@ const router = createBrowserRouter([
       {
       path: '/', 
       element: <Home />,}
- feature/Environmentvariable
+
       // ,
       // {
       // path: '/', 
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
       path: '/Filters', 
       element: <Filters />,}
- main
+
 
     ]
   }
