@@ -1,19 +1,32 @@
-import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
-import SearchResultContainer from './components/SearchResultContainer'
-// import Api from '../utils/Api'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Home from './components/Home'
+
+
+const router = createBrowserRouter([
+  { element:<Navbar />,
+    children: [
+      {
+      path: '/', 
+      element: <Home />,}
+      // ,
+      // {
+      // path: '/', 
+      // element: <Home />,}
+
+    ]
+  }
+
+])
+
 import Filters from './components/Filters'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <Navbar />
-    <SearchResultContainer />
-    <Filters />
-    </>
+    <RouterProvider router={router} />
+  </>
   )
 }
 
