@@ -2,7 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './components/Home'
-
+import Filters from './components/Filters'
 
 const router = createBrowserRouter([
   { element:<Navbar />,
@@ -10,10 +10,17 @@ const router = createBrowserRouter([
       {
       path: '/', 
       element: <Home />,}
+ feature/Environmentvariable
       // ,
       // {
       // path: '/', 
       // element: < />,}
+
+      ,
+      {
+      path: '/Filters', 
+      element: <Filters />,}
+ main
 
     ]
   }
