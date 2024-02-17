@@ -17,7 +17,6 @@ function Hero () {
     return (
       <section className=" hero w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
         <div>
-          {/* Add your image here */}
         <img src= {appLogo} alt="Logo Image" 
         className="hero-image mb-4 md:mb-6 mx-auto" />
 
