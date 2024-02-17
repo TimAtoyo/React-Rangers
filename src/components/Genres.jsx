@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import GetGenres from "../utils/Api-filters";
+import GetGenres from "../utils/Api-genres";
 
 function Genres() {
   const [genres, setGenres] = useState([]);
@@ -21,16 +21,15 @@ function Genres() {
     fetchData();
   }, []);
 
-  function addGenre(categories){
+  function addGenre(categories) {
     setValue([...value, categories]);
     setGenres(genres.filter((g) => g.id !== categories.id));
   }
 
-  function removeGenre(categories){
+  function removeGenre(categories) {
     setValue(value.filter((g) => g.id !== categories.id));
-    setGenres([...genres, categories])
+    setGenres([...genres, categories]);
   }
-
 
   return (
     // return buttons with genre name
@@ -45,9 +44,7 @@ function Genres() {
           >
             {val.name}
           </button>
-        ))
-
-      }
+        ))}
       {genres.length == 0 && <p>No genres</p>}
       {genres &&
         genres.map((genre) => (
