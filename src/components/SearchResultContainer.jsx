@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SingleCardResult from './SingleCardResult'
 import SearchForm from './SearchForm'
 import Api from '../utils/Api'
+import Hero from './Hero'
 
 function SearchResultContainer() {
   const [searchData, setSearchData] = useState({
@@ -38,6 +39,7 @@ function SearchResultContainer() {
 
   return (
     <div>
+      <Hero/>
       <SearchForm  
             search={searchData.search}
             handleFormSubmit={handleFormSubmit}

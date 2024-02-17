@@ -2,10 +2,11 @@
   --dark-blue: #040D40;
   --medium-blue: #051259;
   --violet: #AC9FBF;
-  --violet-grey: #8F85A6;
+  --violet-grey: #040D40;
   --purple: #8B518C;
   --pink: #F288C2;
   --light-pink: #F2DCE8;
+  --mid-color: #AF84A4;
 }
 
 #root {
@@ -22,3 +23,15 @@
   display: flex;
   gap: 2rem;
 }
+.hero {
+  background-color: var(--medium-blue) ;
+  
+}
+.hero-title{
+  color: var(--light-pink);
+}
+
+.hero-para{
+  color: var(--light-pink)
+}
+
