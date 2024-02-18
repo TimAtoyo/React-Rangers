@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import GetMovies from "../utils/Api-movies-filters";
 // import Genres from "./Genres";
 
-function MoviesByGenres({ genresString }) {
+function MoviesByGenres({ genresString, releaseYear }) {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await GetMovies(genresString);
+        console.log("Genres String:", genresString);
+        console.log("Release Year:", releaseYear);
+        const data = await GetMovies({genresString, releaseYear});
         console.log(data);
         setResults(data.results); // Update the state with the fetched genres
       } catch (error) {
@@ -18,7 +20,7 @@ function MoviesByGenres({ genresString }) {
     }
 
     fetchData();
-  }, [genresString]);
+  }, [genresString, releaseYear]);
 
   return (
     <>
