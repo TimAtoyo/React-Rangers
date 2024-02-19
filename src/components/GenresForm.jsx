@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import GetGenres from "../utils/Api-genres";
 
-function GenresForm({checkedGenre, handleCheckboxChange}) {
+function GenresForm({ checkedGenre, handleCheckboxChange }) {
   const [genres, setGenres] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -21,25 +21,21 @@ function GenresForm({checkedGenre, handleCheckboxChange}) {
 
   return (
     <>
-        {genres &&
-            genres.map((genres) => (
-               
-                    <label key={genres.id}>
-                        <input
-                            type='checkbox'
-                            value={genres.id}
-                            checked={checkedGenre.includes(`${genres.id}`)}
-                            onChange={handleCheckboxChange}
-                         />
-                         {genres.name}
-                    </label>
-                
-            ))
-
-        }
+      {genres &&
+        genres.map((genres) => (
+          <label key={genres.id} className="checkbox-btn">
+            <input
+              type="checkbox"
+              value={genres.id}
+              checked={checkedGenre.includes(`${genres.id}`)}
+              onChange={handleCheckboxChange}
+              style={{ display: "none" }}
+            />
+            <span className="btn-label">{genres.name}</span>
+          </label>
+        ))}
     </>
-  )
-
+  );
 }
 
 export default GenresForm;
