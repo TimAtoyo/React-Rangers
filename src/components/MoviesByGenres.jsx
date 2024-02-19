@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GetMovies from "../utils/Api-movies-filters";
-// import Genres from "./Genres";
+import { Link } from "react-router-dom";
 
 function MoviesByGenres({ genresString, releaseYear }) {
   const [results, setResults] = useState([]);
@@ -10,7 +10,7 @@ function MoviesByGenres({ genresString, releaseYear }) {
       try {
         console.log("Genres String:", genresString);
         console.log("Release Year:", releaseYear);
-        const data = await GetMovies({genresString, releaseYear});
+        const data = await GetMovies({ genresString, releaseYear });
         console.log(data);
         setResults(data.results); // Update the state with the fetched genres
       } catch (error) {
@@ -26,22 +26,26 @@ function MoviesByGenres({ genresString, releaseYear }) {
     <>
       {/* <Genres /> */}
       <div className="flex justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {results &&
-          results.map((result) => (
-            <div key={result.id} className="max-w-xs rounded overflow-hidden shadow-lg">
-              <img
-                className="w-full"
-                src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
-                alt="poster"
-              ></img>
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{result.title}</div>
-                <p className="text-gray-700 text-base">{result.release_date}</p>
-              </div>
-            </div>
-          ))}
-      </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          {results &&
+            results.map((result) => (
+              <Link to={`/details/${result.id}`} key={result.id}>
+                <div className="max-w-xs rounded overflow-hidden shadow-lg">
+                  <img
+                    className="w-full"
+                    src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
+                    alt="poster"
+                  ></img>
+                  <div className="px-6 py-4">
+                    <div className="font-bold text-xl mb-2">{result.title}</div>
+                    <p className="text-gray-700 text-base">
+                      {result.release_date}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+        </div>
       </div>
     </>
   );
