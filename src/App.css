@@ -6,29 +6,31 @@
   --purple: #8B518C;
   --pink: #F288C2;
   --light-pink: #F2DCE8;
-  --white: #fff;
-  --another-one:#f791f8;
   --mid-color: #AF84A4;
 }
 
 #root {
-  
-  margin: 0 auto;
-  padding-top: 1rem;
-  padding-inline:2rem;
-  text-align: center;
-  height:100dvh;
-  background: linear-gradient(180deg, var(--dark-blue) 20%, var(  --another-one) 100%);
-  background: blur(57px);
-}
-
-.home {
   max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 .nav {
-  max-width: 1280px;
+  background-color: var(--dark-blue);
+  color: var(--pink);
+  height: 3rem;
   display: flex;
-  align-items:center;
   gap: 2rem;
+}
+.hero {
+  background-color: var(--medium-blue) ;
+  
+}
+.hero-title{
+  color: var(--light-pink);
+}
+
+.hero-para{
+  color: var(--light-pink)
 }
