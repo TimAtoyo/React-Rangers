@@ -43,7 +43,7 @@ function Home() {
   };
 
   return (
-    <div className='flex flex-col mx-auto home px-10'>
+    <div className='flex flex-col mx-auto home mb-96 px-10'>
       <Hero/>
       <SearchForm  
             search={searchData.search}
