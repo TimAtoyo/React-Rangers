@@ -4,7 +4,7 @@ function SingleCardResult({results, apiState}) {
 
   
   if (results === '' || apiState === undefined ) {
-    return <div><h1 className="text-white mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl dark:text-white">No Results</h1></div>;
+    return <div><h1 className="text-white my-40 text-2xl leading-none tracking-tight md:text-5xl lg:text-6xl dark:text-white">No Results</h1></div>;
   } else {
     return (
       <div>
