@@ -32,6 +32,12 @@
   color: var(--light-pink)
 }
 
+
+
+.home {
+  min-height: 100%;
+  background-color: var(--medium-blue);
+
 .checkbox-btn {
   display: inline-block;
   margin-right: 5px
@@ -50,4 +56,5 @@
 .checkbox-btn input[type="checkbox"]:checked + .btn-label {
   background-color: #007bff;
   color: #fff;
+
 }
