@@ -1,4 +1,7 @@
 import axios from 'axios';
+// index.mjs (ESM)
+
+
 // Export an object with a "search" method that searches the Giphy API for the passed query
 export default 
 {
@@ -10,7 +13,7 @@ export default
       params: {query:query, include_adult:include_adult, language: 'en-US', page: '1'},
       headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYzNiN2EzYzRmYzVmMWI0MmY0NDNlOTM1NGNiNjdkZCIsInN1YiI6IjY1Y2JiOGJlZTE5NGIwMDE4NDRlOGQ0MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.n2yRhhbGIfvOH56Q53jLr3zqUb0wa7MA64zDzsLaPUc'
+        Authorization: `Bearer ${import.meta.env.VITE_SINGLE_SEARCH}`
       }
     })
   }
