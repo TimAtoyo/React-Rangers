@@ -2,6 +2,7 @@ import  { useState } from 'react'
 import SingleCardResult from './SingleCardResult'
 import SearchForm from './SearchForm'
 import Api from '../utils/Api'
+import Hero from './Hero'
 
 function Home() {
   const [searchData, setSearchData] = useState({
@@ -42,7 +43,8 @@ function Home() {
   };
 
   return (
-    <div className='flex flex-col mx-auto justify-start home'>
+    <div className='flex flex-col mx-auto home px-10'>
+      <Hero/>
       <SearchForm  
             search={searchData.search}
             handleFormSubmit={handleFormSubmit}

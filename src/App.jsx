@@ -1,7 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Home from './components/Home'
+import Hero from './components/Hero'; import Home from './components/Home'
 import FiltersForm from './components/FiltersForm'
 import MovieDetailsResult from './components/MovieDetailsResult'
 

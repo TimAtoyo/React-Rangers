@@ -3,7 +3,7 @@
 function SearchForm({ search, handleFormSubmit, handleInputChange }) {
   return (
     <div>
-    <form className=" max-w-full mx-auto my-10">   
+    <form className=" mx-auto w-1/2 my-10">   
         <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
         <div className="relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
