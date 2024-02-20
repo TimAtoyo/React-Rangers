@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import GetMovieDetails from "../utils/Api-details";
+import formatDate from "../utils/formatDate";
+import formatRating from "../utils/formatRating";
 
 function MovieDetails({ movieId }) {
   // const {id} = useParams();
@@ -36,8 +38,8 @@ function MovieDetails({ movieId }) {
           ))}
         </ul>
       )}
-      <p>Release date: {results.release_date}</p>
-      <p>Rating: {results.vote_average}</p>
+      <p>Release date: {formatDate(results.release_date)}</p>
+      <p>Rating: {formatRating(results.vote_average)}</p>
       <img
         src={`https://image.tmdb.org/t/p/w342/${results.poster_path}`}
         alt="poster"
