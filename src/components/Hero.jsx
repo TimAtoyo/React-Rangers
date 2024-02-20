@@ -15,10 +15,10 @@ import heroImage9 from '../images/past-lives.jpeg';
 
 function Hero () {
     return (
-      <section className=" hero w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto">
+      <section className=" hero w-full px-10 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto">
         <div>
         <img src= {appLogo} alt="Logo Image" 
-        className="hero-image mb-4 md:mb-6 mx-auto" />
+        className="hero-image mb-4 md:mb-6 mx-auto px-3" />
 
           <h3 className="hero-title text-4xl md:text-6xl font-semibold">
             Movie Rayders
