@@ -7,7 +7,7 @@ const GetGenres = async () => {
         const response = await axios.get('https://api.themoviedb.org/3/genre/movie/list', {
             params: {
                 language: 'en',
-                api_key: apiKey // Pass the API key as a query parameter
+                api_key: apiKey
             },
             headers: {
                 'Accept': 'application/json'
@@ -15,10 +15,9 @@ const GetGenres = async () => {
         });
         console.log(response.data);
         console.log(response.data.genres[0].name);
-        return response.data; // Return the data
+        return response.data;
     } catch (error) {
         console.error('Error fetching data:', error);
-        // Handle error
         throw error; // Re-throw the error if needed
     }
 };
