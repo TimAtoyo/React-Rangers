@@ -14,7 +14,7 @@ function Home() {
   const searchMovie = ( queryString ,isAdultContent) => {
  Api.search(queryString, isAdultContent)
     .then(res => {
-      // console.log(res.data.results[0]);
+      console.log(res.data.results[0]);
       setSearchData({ 
       ...searchData, 
       results: (res.data.results[0]) ? res.data.results[0] : '' ,
@@ -51,7 +51,7 @@ function Home() {
             handleInputChange={handleInputChange}
       />
       <div className='grid'>
-        <h3 className='text-left text-yellow-50'>Results:</h3>
+        <h3 className='text-left text-white'>Results:</h3>
         <SingleCardResult
         results={searchData.results}
         apiState={searchData.apiState}

@@ -4,7 +4,7 @@ import Capture  from '../assets/Capture.png'
 function Navbar() {
   return (
     <header>
-      <nav className='nav m-auto flex items-center justify-between flex-wrap h-20 px-10'>
+      <nav className='nav m-auto flex items-center justify-between flex-wrap h-20 px-10 shadow-lg'>
       <div className="relative max-w-sm transition-all duration-300 cursor-pointer ">
           <Link to="/" className='relative'>
           
