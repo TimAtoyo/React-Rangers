@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GetMovies from "../utils/Api-movies-filters";
 import { Link } from "react-router-dom";
+import formatDate from "../utils/formatDate";
 
 function MoviesByGenres({ genresString, releaseYear }) {
   const [results, setResults] = useState([]);
@@ -29,7 +30,7 @@ function MoviesByGenres({ genresString, releaseYear }) {
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {results &&
             results.map((result) => (
-              <Link to={`/details/${result.id}`} key={result.id}>
+              <Link to={`/details/${result.id}`} key={result.id} target="_blank">
                 <div className="max-w-xs rounded overflow-hidden shadow-lg">
                   <img
                     className="w-full"
@@ -39,7 +40,7 @@ function MoviesByGenres({ genresString, releaseYear }) {
                   <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{result.title}</div>
                     <p className="text-gray-700 text-base">
-                      {result.release_date}
+                      {formatDate(result.release_date)}
                     </p>
                   </div>
                 </div>
