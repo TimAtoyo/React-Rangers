@@ -3,6 +3,12 @@ import Navbar from './components/Navbar'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './components/Home'
 import Filters from './components/Filters'
+import Genres from './components/Genres'
+import MoviesByGenres from './components/MoviesByGenres'
+import FiltersForm from './components/FiltersForm'
+import MovieDetails from './components/MovieDetails'
+import MovieDetailsResult from './components/MovieDetailsResult'
+
 
 const router = createBrowserRouter([
   { element:<Navbar />,
@@ -10,16 +16,15 @@ const router = createBrowserRouter([
       {
       path: '/', 
       element: <Home />,}
+      ,
 
-      // ,
-      // {
-      // path: '/', 
-      // element: < />,}
-
+          {
+      path: '/details/:id', 
+      element: <MovieDetailsResult />,}
       ,
       {
       path: '/Filters', 
-      element: <Filters />,}
+      element: <FiltersForm />,}
 
 
     ]
