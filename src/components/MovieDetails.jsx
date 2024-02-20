@@ -26,24 +26,28 @@ function MovieDetails({ movieId }) {
 
   return (
     <>
-      <h2>MovieDetails</h2>
-      <p>{results.title}</p>
-      <h3>Overview</h3>
-      <p>{results.overview}</p>
-      {results.genres && (
-        <ul>
-          Genres:
-          {results.genres.map((genre) => (
-            <li key={genre.id}>{genre.name}</li>
-          ))}
-        </ul>
-      )}
-      <p>Release date: {formatDate(results.release_date)}</p>
-      <p>Rating: {formatRating(results.vote_average)}</p>
-      <img
-        src={`https://image.tmdb.org/t/p/w342/${results.poster_path}`}
-        alt="poster"
-      ></img>
+      <div className="max-w-xl mx-auto my-8 rounded overflow-hidden shadow-lg sm:flex">
+        <img
+          className="w-full sm:w-1/2 sm:h-auto sm:object-cover"
+          src={`https://image.tmdb.org/t/p/w342/${results.poster_path}`}
+          alt="poster"
+        ></img>
+        <div className="w-full sm:w-1/2 px-6 py-4">
+          <div className="font-bold text-xl mb-2">{results.title}</div>
+          <p>Release date: {formatDate(results.release_date)}</p>
+          <p>Rating: {formatRating(results.vote_average)}</p>
+          {results.genres && (
+            <div className="px-6 pt-4 pb-2">
+              {results.genres.map((genre) => (
+                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" key={genre.id}>{genre.name}</span>
+              ))}
+            </div>
+          )}
+          <hr></hr>
+          <div className="font-bold mb-1 mt-2">Overview</div>
+          <p class="text-gray-700 text-base">{results.overview}</p>
+        </div>
+      </div>
     </>
   );
 }
