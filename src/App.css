@@ -32,11 +32,10 @@
   color: var(--light-pink)
 }
 
-
-
 .home {
   min-height: 100%;
   background-color: var(--medium-blue);
+}
 
 .checkbox-btn {
   display: inline-block;
