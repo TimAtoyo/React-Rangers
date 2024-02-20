@@ -30,7 +30,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <main className='mx-auto'>
+    <main className='mx-auto h-100 pb-48'>
     <RouterProvider router={router} />
   </main>
   )
