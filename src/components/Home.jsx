@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import SingleCardResult from './SingleCardResult'
 import SearchForm from './SearchForm'
 import Api from '../utils/Api'
-import Hero from './Hero'
 
-function SearchResultContainer() {
+function Home() {
   const [searchData, setSearchData] = useState({
     search: '',
-    results: []
+    results: '', 
+    apiState: undefined
   })
 
   const searchMovie = ( queryString ,isAdultContent) => {
@@ -16,40 +16,47 @@ function SearchResultContainer() {
       // console.log(res.data.results[0]);
       setSearchData({ 
       ...searchData, 
-      results: (res.data.results[0]) ? res.data.results[0] : '' })})
+      results: (res.data.results[0]) ? res.data.results[0] : '' ,
+      apiState: res.data.results[0]
+    
+    }
+      )})
   }
 
   // searchMovie('matrix', 'true')
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
- console.log(event.target);
- console.log([name]);
+//  console.log(event.target);
+//  console.log([name]);
 
     setSearchData({
       ...searchData,
       [name]: value,
     });
   };
-
+// console.log(import.meta.env.VITE_SINGLE_SEARCH);
   const handleFormSubmit = (event) => {
     event.preventDefault();
     searchMovie(searchData.search);
   };
 
   return (
-    <div>
-      <Hero/>
+    <div className='flex flex-col mx-auto justify-start home'>
       <SearchForm  
             search={searchData.search}
             handleFormSubmit={handleFormSubmit}
             handleInputChange={handleInputChange}
       />
-      <SingleCardResult 
-      results={searchData.results}
-      />
+      <div className='grid'>
+        <h3 className='text-left text-yellow-50'>Results:</h3>
+        <SingleCardResult
+        results={searchData.results}
+        apiState={searchData.apiState}
+        />
+      </div>
     </div>
   )
 }
 
-export default SearchResultContainer
+export default Home
