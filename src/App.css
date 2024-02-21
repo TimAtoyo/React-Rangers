@@ -48,9 +48,9 @@
   display: inline-block;
   cursor: pointer;
 }
+
 .checkbox-btn input[type="checkbox"]:checked + .btn-label {
   background-color: #007bff;
-
   color: #fff;
 }
 
@@ -64,8 +64,6 @@
  
 }
 
-  color: #fffffff3;
-}
 
 .background-details {
   background-color: black;

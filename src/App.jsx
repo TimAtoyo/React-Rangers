@@ -3,8 +3,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import './App.css'
 import Navbar from './components/Navbar'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Hero from './components/Hero'; import Home from './components/Home'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom' 
 import FiltersForm from './components/FiltersForm'
 import MovieDetailsResult from './components/MovieDetailsResult'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
@@ -37,7 +36,7 @@ function App() {
   return (
 
     <QueryClientProvider client={queryClient}>
-    <main className='mx-auto h-100 pb-48'>
+    <main className='mx-auto h-100'>
     <RouterProvider router={router} />
     <Footer/>
   </main>

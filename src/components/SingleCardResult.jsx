@@ -1,7 +1,7 @@
 
 
-function SingleCardResult({results, apiState}) {
-
+function SingleCardResult({results, apiState, genres}) {
+  // console.log('Single card', genres);
   
   if (results === '' || apiState === undefined ) {
     return <div><h1 className="text-white my-40 text-2xl leading-none tracking-tight md:text-5xl lg:text-6xl dark:text-white">No Results</h1></div>;
@@ -18,10 +18,8 @@ function SingleCardResult({results, apiState}) {
         <div className="mt-5">
           <p className="block mt-1 text-lg text-left leading-tight font-thin text-black ">{results.overview}</p>
           <p className="block mt-1 text-lg text-left leading-tight font-medium text-black mt-5"><span className=" font-thin">Release Date</span>: {results.release_date}</p>
- {results.genre_ids.map( genre => (
-
- 
-    <span key={Math.random().toString()} className="bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded-full mt-1 text-sm text-left leading-tight font-mediummt-5">{genre}</span>
+ {genres.map( genre => ( 
+    <span key={Math.random().toString()} className="bg-blue-500 hover:bg-blue-700 text-white  py-2 px-4 rounded-full mt-1 text-sm text-left leading-tight font-mediummt-5">{genre.id}</span>
  ))
  }
  <p className="block mt-1 text-lg text-left leading-tight font-medium text-black mt-5"><span className=" font-thin">Rating</span>: {results.vote_average}</p>
