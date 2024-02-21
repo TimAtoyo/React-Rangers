@@ -48,10 +48,22 @@
   display: inline-block;
   cursor: pointer;
 }
+
 .checkbox-btn input[type="checkbox"]:checked + .btn-label {
   background-color: #007bff;
-  color: #fffffff3;
+  color: #fff;
 }
+
+.footer {
+  background-color: var(--dark-blue);
+  color: var(--pink);
+  height: 3rem;
+  display: flex;
+  gap: 3rem;
+  
+ 
+}
+
 
 .background-details {
   background-color: black;
@@ -72,3 +84,4 @@
   width: 100%;
   object-fit: cover;
 }
+

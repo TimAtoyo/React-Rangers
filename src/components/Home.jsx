@@ -46,6 +46,7 @@ function Home() {
 
   const {genres} = useGetGenre();
   return (
+
     
         <div className='flex flex-col mx-auto home mb-96 px-10'>
           <Hero/>
