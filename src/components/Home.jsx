@@ -3,8 +3,8 @@ import SingleCardResult from './SingleCardResult'
 import SearchForm from './SearchForm'
 import Api from '../utils/Api'
 import Hero from './Hero'
-
 import MovieReccomendations from './MovieReccomendations'
+
 function Home() {
   const [searchData, setSearchData] = useState({
     search: '',
@@ -45,6 +45,7 @@ function Home() {
 
 
   return (
+
     
         <div className='flex flex-col mx-auto home mb-96 px-10'>
           <Hero/>
