@@ -26,7 +26,12 @@ function MovieDetails({ movieId }) {
 
   return (
     <>
-      <div className="max-w-xl mx-auto my-8 rounded overflow-hidden shadow-lg sm:flex">
+    
+    <div className="relative">
+      <img className="absolute inset-0 backdrop opacity-50" src={`https://image.tmdb.org/t/p/original/${results.backdrop_path}`}
+          alt="poster"></img></div>
+      <div className="relative z-10">    
+      <div className="max-w-xl mx-auto mt-64 my-8 bg-gray-200 rounded overflow-hidden shadow-lg sm:flex">
         <img
           className="w-full sm:w-1/2 sm:h-auto sm:object-cover"
           src={`https://image.tmdb.org/t/p/w342/${results.poster_path}`}
@@ -39,7 +44,7 @@ function MovieDetails({ movieId }) {
           {results.genres && (
             <div className="px-6 pt-4 pb-2">
               {results.genres.map((genre) => (
-                <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" key={genre.id}>{genre.name}</span>
+                <span className="inline-block bg-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-800 mr-2 mb-2" key={genre.id}>{genre.name}</span>
               ))}
             </div>
           )}
@@ -47,6 +52,7 @@ function MovieDetails({ movieId }) {
           <div className="font-bold mb-1 mt-2">Overview</div>
           <p class="text-gray-700 text-base">{results.overview}</p>
         </div>
+      </div>
       </div>
     </>
   );
