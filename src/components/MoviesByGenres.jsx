@@ -42,8 +42,7 @@ function MoviesByGenres({ genresString, releaseYear }) {
                   <p className="text-gray-100 text-base">
                       {formatDate(result.release_date)}
                     </p>
-                    <div className="text-gray-100 font-bold text-lg mb-2">{result.title}</div>
-                    
+                    <div className="text-gray-100 font-bold text-lg mb-2">{result.title}</div> 
                   </div>
                 
               </Link>
