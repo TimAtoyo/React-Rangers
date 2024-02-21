@@ -30,14 +30,14 @@ function MovieDetails({ movieId }) {
     <div className="relative">
       <img className="absolute inset-0 backdrop opacity-50" src={`https://image.tmdb.org/t/p/original/${results.backdrop_path}`}
           alt="poster"></img></div>
-      <div className="relative z-10">    
-      <div className="w-4/5 mx-auto mt-64 my-8 bg-gray-200 rounded overflow-hidden shadow-lg sm:flex">
+      <div className="relative z-10 mx-7">    
+      <div className="max-w-xl mx-auto mt-64 my-8 bg-gray-200 rounded overflow-hidden shadow-lg sm:flex">
         <img
-          className="w-full sm:w-1/3 sm:h-auto sm:object-cover"
-          src={`https://image.tmdb.org/t/p/w500/${results.poster_path}`}
+          className="w-full sm:w-1/2 sm:h-auto sm:object-cover"
+          src={`https://image.tmdb.org/t/p/w342/${results.poster_path}`}
           alt="poster"
         ></img>
-        <div className="w-full sm:w-2/3 px-6 py-4">
+        <div className="w-full sm:w-1/2 px-6 py-4">
           <div className="font-bold text-xl mb-2">{results.title}</div>
           <p>Release date: {formatDate(results.release_date)}</p>
           <p>Rating: {formatRating(results.vote_average)}</p>
