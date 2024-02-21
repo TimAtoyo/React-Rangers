@@ -1,22 +1,24 @@
 // import React from 'react'
-import { Link, NavLink, Outlet } from 'react-router-dom'
-import Capture  from '../assets/Capture.png'
+import { Link, NavLink, Outlet } from "react-router-dom";
+import Capture from "../assets/Capture.png";
 function Navbar() {
   return (
     <header>
-      <nav className='nav m-auto flex items-center justify-between flex-wrap h-20 px-10 shadow-lg'>
-      <div className="relative max-w-sm transition-all duration-300 cursor-pointer ">
-          <Link to="/" className='relative'>
-          
-<img src={Capture} className='object-contain h-fit  w-20' alt="" />
+      <nav className="nav m-auto flex items-center flex-wrap h-20 px-10 shadow-lg">
+        <div className="relative max-w-sm transition-all duration-300 cursor-pointer ">
+          <Link to="/" className="relative">
+            <img src={Capture} className="object-contain h-fit w-20" alt="" />
           </Link>
-    
-  </div>
+        </div>
+        <div className="cursor-pointer transition-all duration-300 font-bold">
+          <Link to="/Filters">
+            SEARCH BY FILTERS
+          </Link>
+        </div>
       </nav>
       <Outlet />
     </header>
-    
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
