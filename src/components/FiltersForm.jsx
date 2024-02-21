@@ -33,15 +33,15 @@ function FiltersForm() {
 
   return (
     <div>
-      <h2>Filters</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-            <label htmlFor='year'>Year:</label>
+      <form onSubmit={handleSubmit} className="mt-6 mb-3">
+        <div className="my-3">
+            <label className="text-gray-100 p-1" htmlFor='year'>Year: </label>
             <input
                 type='text'
                 id='year'
                 value={year}
                 onChange={handleYearChange}
+                className="rounded p-1 bg-gray-100"
             />
         </div>
         <div>
@@ -51,7 +51,7 @@ function FiltersForm() {
           />
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" className="bg-blue-500 hover:bg-blue-800 font-bold py-2 px-4 my-3 rounded text-gray-100">Submit</button>
         </div>
       </form>
       <MoviesByGenres genresString={genresString} releaseYear={yearNumber} />
