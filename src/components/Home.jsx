@@ -3,11 +3,12 @@ import SingleCardResult from './SingleCardResult'
 import SearchForm from './SearchForm'
 import Api from '../utils/Api'
 import Hero from './Hero'
-
+import {  useGetGenre } from '../hooks/useGetGenre'
 import MovieReccomendations from './MovieReccomendations'
+
 function Home() {
   const [searchData, setSearchData] = useState({
-    search: '',
+    search: 'matrix',
     results: '', 
     apiState: undefined
   })
@@ -43,7 +44,7 @@ function Home() {
     searchMovie(searchData.search);
   };
 
-
+  const {genres} = useGetGenre();
   return (
     
         <div className='flex flex-col mx-auto home mb-96 px-10'>
@@ -58,6 +59,7 @@ function Home() {
             <SingleCardResult
             results={searchData.results}
             apiState={searchData.apiState}
+            genres={genres}
             />
           </div>
           <MovieReccomendations/>

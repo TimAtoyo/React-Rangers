@@ -1,13 +1,16 @@
 import React from 'react'
 import { useGet } from '../hooks/useGet'
+import {  useGetGenre } from '../hooks/useGetGenre'
 import MovieReccomendationsCard from './MovieReccomendationsCard';
 
 function MovieReccomendations() {
     const {movies, isLoading} = useGet();
+    const {genres} = useGetGenre();
+
   return (
     <div>
 <h3 className=' text-left font-medium text-xl mb-6 text-white'>Trending this Week:</h3>
-    <div className='grid-cols-4 gap-10 grid'>
+    <div className='grid-cols-3 gap-10 grid'>
         
         {
         isLoading ? 'Loading movies' : 
@@ -15,6 +18,7 @@ function MovieReccomendations() {
             return <MovieReccomendationsCard
                     key={movie.id}
                     movie={movie}
+                    genres={genres}
                     />
         })
     
