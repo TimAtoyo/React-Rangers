@@ -26,8 +26,8 @@ function MoviesByGenres({ genresString, releaseYear }) {
   return (
     <>
       {/* <Genres /> */}
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      <div className="flex justify-center mx-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {results &&
             results.map((result) => (
               <Link to={`/details/${result.id}`} key={result.id} target="_blank">
@@ -37,13 +37,15 @@ function MoviesByGenres({ genresString, releaseYear }) {
                     src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
                     alt="poster"
                   ></img>
-                  <div className="px-6 py-4">
-                    <div className="font-bold text-xl mb-2">{result.title}</div>
-                    <p className="text-gray-700 text-base">
+                  </div>
+                  <div className="px-6 py-2">
+                  <p className="text-gray-100 text-base">
                       {formatDate(result.release_date)}
                     </p>
+                    <div className="text-gray-100 font-bold text-lg mb-2">{result.title}</div>
+                    
                   </div>
-                </div>
+                
               </Link>
             ))}
         </div>
