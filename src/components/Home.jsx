@@ -4,6 +4,7 @@ import SearchForm from './SearchForm'
 import Api from '../utils/Api'
 import Hero from './Hero'
 
+import MovieReccomendations from './MovieReccomendations'
 function Home() {
   const [searchData, setSearchData] = useState({
     search: '',
@@ -14,7 +15,7 @@ function Home() {
   const searchMovie = ( queryString ,isAdultContent) => {
  Api.search(queryString, isAdultContent)
     .then(res => {
-      // console.log(res.data.results[0]);
+      console.log(res.data.results[0]);
       setSearchData({ 
       ...searchData, 
       results: (res.data.results[0]) ? res.data.results[0] : '' ,
@@ -42,22 +43,27 @@ function Home() {
     searchMovie(searchData.search);
   };
 
+
   return (
-    <div className='flex flex-col mx-auto home px-10'>
-      <Hero/>
-      <SearchForm  
-            search={searchData.search}
-            handleFormSubmit={handleFormSubmit}
-            handleInputChange={handleInputChange}
-      />
-      <div className='grid'>
-        <h3 className='text-left text-yellow-50'>Results:</h3>
-        <SingleCardResult
-        results={searchData.results}
-        apiState={searchData.apiState}
-        />
-      </div>
-    </div>
+    
+        <div className='flex flex-col mx-auto home mb-96 px-10'>
+          <Hero/>
+          <SearchForm  
+                search={searchData.search}
+                handleFormSubmit={handleFormSubmit}
+                handleInputChange={handleInputChange}
+          />
+          <div className='grid'>
+            <h3 className='text-left text-white'>Results:</h3>
+            <SingleCardResult
+            results={searchData.results}
+            apiState={searchData.apiState}
+            />
+          </div>
+          <MovieReccomendations/>
+
+        </div>
+
   )
 }
 
