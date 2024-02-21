@@ -6,14 +6,14 @@ function Navbar() {
     <header>
       <nav className="nav m-auto flex items-center flex-wrap h-20 px-10 shadow-lg">
         <div className="relative max-w-sm transition-all duration-300 cursor-pointer ">
-          <Link to="/" className="relative">
+          <NavLink to="/" className="relative">
             <img src={Capture} className="object-contain h-fit w-20" alt="" />
-          </Link>
+          </NavLink>
         </div>
         <div className="cursor-pointer transition-all duration-300 font-bold">
-          <Link to="/Filters">
+          <NavLink to="/Filters">
             SEARCH BY FILTERS
-          </Link>
+          </NavLink>
         </div>
       </nav>
       <Outlet />
