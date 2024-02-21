@@ -26,9 +26,7 @@ function Hero () {
           <p className=" hero-para text-base md:text-lg my-4 md:my-6">
           Discover movies effortlessly by title or category
           </p>
-          <button className=" hero-explore-bttn bg-customPink text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
-            Explore
-          </button>
+          
         </div>
         <ShuffleGrid />
       </section>

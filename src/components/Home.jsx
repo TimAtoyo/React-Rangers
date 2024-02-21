@@ -3,7 +3,7 @@ import SingleCardResult from './SingleCardResult'
 import SearchForm from './SearchForm'
 import Api from '../utils/Api'
 import Hero from './Hero'
-import Footer from './Footer'
+
 
 function Home() {
   const [searchData, setSearchData] = useState({
@@ -59,7 +59,7 @@ function Home() {
         />
       </div>
 
-      <Footer/>
+  
     </div>
   )
 }
