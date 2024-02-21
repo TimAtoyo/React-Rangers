@@ -30,7 +30,7 @@ function MoviesByGenres({ genresString, releaseYear }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {results &&
             results.map((result) => (
-              <Link to={`/details/${result.id}`} key={result.id} target="_blank">
+              <Link to={`/details/${result.id}`} key={result.id}>
                 <div className="max-w-xs rounded overflow-hidden shadow-lg">
                   <img
                     className="w-full"
