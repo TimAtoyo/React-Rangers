@@ -10,7 +10,7 @@ function MovieReccomendations() {
   return (
     <div>
 <h3 className=' text-left font-medium text-xl mb-6 text-white'>Trending this Week:</h3>
-    <div className='grid-cols-3 gap-10 grid'>
+    <div className='lg:grid-cols-3 md:grid-cols-2 grid-cols  gap-10 grid'>
         
         {
         isLoading ? 'Loading movies' : 
