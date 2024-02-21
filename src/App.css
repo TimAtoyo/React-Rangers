@@ -13,7 +13,7 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
-  background-color: var(--medium-blue)
+  background-color: var(--dark-blue);
 }
 
 .nav {
@@ -22,6 +22,10 @@
   height: 3rem;
   display: flex;
   gap: 2rem;
+}
+
+.hero {
+  background-color: var(--medium-blue)
 }
 
 .hero-title{
@@ -37,23 +41,34 @@
   background-color: var(--medium-blue);
 }
 
-.checkbox-btn {
-  display: inline-block;
-  margin-right: 5px
-}
 .checkbox-btn input[type="checkbox"] {
   display: none;
 }
 .checkbox-btn .btn-label {
   display: inline-block;
-  padding: 5px 20px;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   cursor: pointer;
 }
 .checkbox-btn input[type="checkbox"]:checked + .btn-label {
   background-color: #007bff;
-  color: #fff;
+  color: #fffffff3;
+}
 
+.background-details {
+  background-color: black;
+}
+
+.backdrop {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.background-details {
+  background-color: black;
+}
+
+.backdrop {
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
 }

@@ -23,15 +23,15 @@ function GenresForm({ checkedGenre, handleCheckboxChange }) {
     <>
       {genres &&
         genres.map((genres) => (
-          <label key={genres.id} className="checkbox-btn">
+          <label key={genres.id}
+            className="checkbox-btn m-1 display: inline-block ">
             <input
               type="checkbox"
               value={genres.id}
               checked={checkedGenre.includes(`${genres.id}`)}
               onChange={handleCheckboxChange}
-              style={{ display: "none" }}
             />
-            <span className="btn-label">{genres.name}</span>
+            <span className="btn-label px-7 py-1 bg-gray-100 rounded hover:bg-blue-300">{genres.name}</span>
           </label>
         ))}
     </>
