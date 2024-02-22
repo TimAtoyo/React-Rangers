@@ -15,7 +15,6 @@ export const useGetGenre = () => {
     const {data: genres, isLoading} = useQuery({
         queryFn: async () => {
             const {data} = await axios.request(options)
-            console.log(data.genres);
             return data.genres
         },
         queryKey: ['genre']
