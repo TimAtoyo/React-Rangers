@@ -32,46 +32,25 @@
  ![alt text](./src/assets/details.png)
           
       
-  ## Credits
-      
-  List your collaborators, if any, with links to their GitHub profiles.
-      
-  If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-      
-  If you followed tutorials, include links to those here as well.
       
   ## License
       
-  MIT License
-      
-      
-  ---
-      
-  🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-      
-  ## Badges
-      
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-      
-  Check out the badges hosted by 
-  [shields.io](https://shields.io/). 
-  
-  You may not understand what they all represent now, but you will in time.
-      
-  ## Languages 
-     
-      
-[image]({BadgeURLHere})
-      https://img.shields.io/badge/JSS-F7DF1E?style=for-the-badge&logo=JSS&logoColor=white
-      
-  ## Features
-      
-  If your project has a lot of features, list them here.
-      
-      ## How to Contribute
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
       
  
       
-  ## Tests
-      We haven't used any testing libraries yet but this is something we plan to add in the future, but of you are familiar with one it's feel free to fork and add one.
+## Languages 
+#### Badges
+      
+![badmath](    https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+![badmath](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+![badmath](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+![badmath](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+      
+      
+## Tests
+We haven't used any testing libraries yet but this is something we plan to add in the future, but of you are familiar with one it's feel free to fork and add one.
 
