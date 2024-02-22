@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import appLogo from '../images/app-logo.jpeg';
+import logo from '../assets/Capture.png';
 import heroImage1 from '../images/godfather-image.jpeg';
 import heroImage2 from '../images/htf.jpeg';
 import heroImage3 from '../images/boyhood.jpg';
@@ -17,12 +18,12 @@ function Hero () {
     return (
       <section className=" hero w-full  md:px-10 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 mx-auto">
         <div>
-        <img src= {appLogo} alt="Logo Image" 
+        <img src= {logo} alt="Logo Image" 
         className="hero-image mb-4 md:mb-6 mx-auto px-3" />
 
-          <h3 className="hero-title text-4xl md:text-6xl font-semibold">
+          {/* <h3 className="hero-title text-4xl md:text-6xl font-semibold">
             Movie Rayders
-          </h3>
+          </h3> */}
           <p className=" hero-para text-base md:text-lg my-4 md:my-6">
           Discover movies effortlessly by title or category
           </p>

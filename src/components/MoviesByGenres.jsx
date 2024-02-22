@@ -34,7 +34,9 @@ function MoviesByGenres({ genresString, releaseYear }) {
                 <div className="max-w-xs rounded overflow-hidden shadow-lg">
                   <img
                     className="w-full"
-                    src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
+                    src={
+                      result.poster_path ?
+                      `https://image.tmdb.org/t/p/original/${result.poster_path}` : unavPoster} 
                     alt="poster"
                   ></img>
                   </div>
