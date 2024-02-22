@@ -9,7 +9,7 @@ function MovieReccomendations() {
 
   return (
     <div>
-<h3 className=' text-left font-medium text-xl mb-6 text-white'>Trending this Week:</h3>
+<h3 className=' text-left font-medium text-xl mt-10 mb-6 text-white'>Trending this Week:</h3>
     <div className='lg:grid-cols-3 md:grid-cols-2 grid-cols  gap-10 grid'>
         
         {
