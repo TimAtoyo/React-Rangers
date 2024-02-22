@@ -16,10 +16,11 @@ function SingleCardResult({results, apiState, genres}) {
         <div className="mt-5">
           <p className="block mt-1 text-lg text-left leading-tight font-thin text-black ">{results.overview}</p>
           <p className="block mt-1 text-lg text-left leading-tight font-medium text-black mt-5"><span className=" font-thin">Release Date</span>: {results.release_date}</p>
+          <h4>
  {results.genre_ids.map( genre => ( 
-    <h4 key={Math.random().toString()} className=" justify-start mx-2 inline-flex mt-4 bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded-full mt-1 text-sm text-left leading-tight font-mediummt-5">{idGenre[genre]}</h4>
+    <span key={Math.random().toString()} className="break-keep justify-start  mx-2  mt-20 mb-4 bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded-full  text-sm text-left leading-tight font-medium ">{idGenre[genre]}</span>
  ))
- }
+ }</h4>
  <p className="block mt-1 text-lg text-left leading-tight font-medium text-black mt-5"><span className=" font-thin">Rating</span>: {results.vote_average}</p>
         </div>
       </div>
