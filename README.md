@@ -27,8 +27,14 @@
  ![alt text](./src/assets/homePage.png)
   #### Search Filters Page
 
+Search my year and select the genres you like and hit search to see movies that match your preferences
+ 
  ![alt text](./src/assets/filters.png)
+   
    #### Search Filters Page
+
+ Once you have searched, dive deeper and find out more about the movie, you can even see reviews to help you decide what to watch!  
+
  ![alt text](./src/assets/details.png)
           
       
