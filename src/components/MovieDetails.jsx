@@ -34,9 +34,8 @@ function MovieDetails({ movieId }) {
       <div className="max-w-xl mx-auto mt-64 my-8 bg-gray-200 rounded overflow-hidden shadow-lg sm:flex">
         <img
           className="w-full sm:w-1/2 sm:h-auto sm:object-cover"
-          src={
-            results.poster_path ?
-            `https://image.tmdb.org/t/p/w342/${results.poster_path}` : unavPoster}
+          src={    
+            `https://image.tmdb.org/t/p/w500/${results.poster_path}`}
           alt="poster"
         ></img>
         <div className="w-full sm:w-1/2 px-6 py-4">
