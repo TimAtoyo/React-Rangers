@@ -33,7 +33,7 @@ function FiltersForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="mt-6 mb-3">
+      <form onSubmit={handleSubmit} className="mb-8 py-3 form">
         <div className="my-3">
             <label className="text-gray-100 p-1" htmlFor='year'>Year: </label>
             <input
@@ -55,7 +55,6 @@ function FiltersForm() {
         </div>
       </form>
       <MoviesByGenres genresString={genresString} releaseYear={yearNumber} />
- 
     </div>
   );
 }

@@ -2,7 +2,7 @@
   --dark-blue: #040D40;
   --medium-blue: #051259;
   --violet: #AC9FBF;
-  --violet-grey: #040D40;
+  --violet-grey: #3e3a66;
   --purple: #8B518C;
   --pink: #F288C2;
   --light-pink: #F2DCE8;
@@ -16,6 +16,8 @@
   background-color: var(--dark-blue);
 }
 
+/* Navbar */
+
 .nav {
   background-color: var(--dark-blue);
   color: var(--pink);
@@ -23,6 +25,8 @@
   display: flex;
   gap: 2rem;
 }
+
+/* Hero */
 
 .hero {
   background-color: var(--medium-blue)
@@ -36,8 +40,26 @@
   color: var(--light-pink)
 }
 
+/* Home */
+
 .home {
   min-height: 100%;
+  background-color: var(--medium-blue);
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--dark-blue);
+  color: var(--pink);
+  height: 3rem;
+  display: flex;
+  gap: 3rem;
+}
+
+/* Filters form */
+
+.form {
   background-color: var(--medium-blue);
 }
 
@@ -54,34 +76,10 @@
   color: #fff;
 }
 
-.footer {
-  background-color: var(--dark-blue);
-  color: var(--pink);
-  height: 3rem;
-  display: flex;
-  gap: 3rem;
-  
- 
-}
-
-
-.background-details {
-  background-color: black;
-}
+/* Movie details page */
 
 .backdrop {
   height: 50vh;
   width: 100%;
   object-fit: cover;
 }
-
-.background-details {
-  background-color: black;
-}
-
-.backdrop {
-  height: 50vh;
-  width: 100%;
-  object-fit: cover;
-}
-
