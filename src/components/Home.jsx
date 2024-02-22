@@ -8,7 +8,7 @@ import MovieReccomendations from './MovieReccomendations'
 
 function Home() {
   const [searchData, setSearchData] = useState({
-    search: 'matrix',
+    search: 'wonka',
     results: '', 
     apiState: undefined
   })
