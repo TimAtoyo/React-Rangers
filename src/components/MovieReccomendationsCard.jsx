@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useAnimate, stagger, motion } from "framer-motion";
 import idGenre from '../utils/genre';
+import formatDate from '../utils/formatDate'
+import formatRating from '../utils/formatRating'
 function MovieReccomendationsCard({movie, genres}) {
 const [open, setOpen]=useState(false)
 const [scope] = useAnimate();
@@ -39,15 +41,17 @@ const handleOpen = (e) => {
       }}
       staggerList
       layout="preserve-aspect"
-      whileTap={{ duration: 0.200 }}  key={Math.random().toString()} className="transition-all ease-in-out duration-1000 object-cover shadow-xl px-3 pt-4 relative bottom-0 z-20 m-0 pb-4 ps-4 ">
-      <h1 className=" text-start  text-2xl font-bold  ">{movie.original_title}</h1>
-      <h1 className=" text-start text-sm font-light  "><span>Released:</span>{movie.release_date}</h1>
-      <h1 className=" text-start text-sm font-light mt-4 px-2">
+      whileTap={{ duration: 0.200 }} key={Math.random().toString()} className="transition-all ease-in-out duration-1000 object-cover shadow-xl px-3 pt-4 relative bottom-0 z-20 m-0 pb-4 ps-4 ">
+      <p className=" text-start text-2xl font-bold  ">{movie.original_title}</p>
+      <p className=" text-start text-sm font-light border-b "><span></span>{formatDate(movie.release_date)}</p>
+      <p className=" text-start text-sm font-light border-b"><span></span>{formatRating(movie.vote_average)}</p>
+      <p className=" text-start  text-sm font-light mt-2 px-2">
       {movie.genre_ids.map( (genre, i) => ( 
-    <h4 key={i} className="break-keep bg-blue-300 hover:bg-blue-700 text-white  py-1 px-2 mx-1 rounded-full mt-4 text-sm text-left leading-tight font-mediummt-5">{idGenre[genre]}</h4>
+    <h4 key={i} className="break-keep border-b bg-blue-300 hover:bg-blue-700 text-white  py-1 px-2 mx-1 rounded-full mt-2 text-center text-sm leading-tight font-mediummt-5">{idGenre[genre]}</h4>
  ))
  }
-      </h1>
+      </p>
+    
  
     </motion.div>
     }
