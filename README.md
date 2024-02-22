@@ -60,3 +60,7 @@ Search my year and select the genres you like and hit search to see movies that 
 ## Tests
 We haven't used any testing libraries yet but this is something we plan to add in the future, but of you are familiar with one it's feel free to fork and add one.
 
+## Deployed Site
+
+
+[Movie Raider](reactrangers.netlify.app/)
