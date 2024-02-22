@@ -1,8 +1,77 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  # React Rangers
+      
+  ## Description
+      
+  Our motivation was to create an apilcation that can be used to search, discover, and diver  deeper in to  more imformation about movies. 
+  We build this project to make it easy for a user to find what they are looking for in terms of movies.
+  This app solves the problem of looking at different resources and combines all information on one location.
+  We learned a lot working on this project, i.e
+      
+  ## Table of Contents
+      
+      
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+      
+  ## Installation
+      
+  In order to run this appication just click the link to the deployed site. alternatively of you want to use the codebase, fork it and run `npm i`  this will install all the dependancies then run `npm run dev` to run the applocation locally.
+      
+      
+  #### Home Page Single Search
+  Search for a film my name on the home page and get a quick view of the the details on a card or alternatively, see whats trending this week bellow the search field.
 
-Currently, two official plugins are available:
+ ![alt text](./src/assets/homePage.png)
+  #### Search Filters Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ ![alt text](./src/assets/filters.png)
+   #### Search Filters Page
+ ![alt text](./src/assets/details.png)
+          
+      
+  ## Credits
+      
+  List your collaborators, if any, with links to their GitHub profiles.
+      
+  If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+      
+  If you followed tutorials, include links to those here as well.
+      
+  ## License
+      
+  MIT License
+      
+      
+  ---
+      
+  🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+      
+  ## Badges
+      
+![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
+      
+  Check out the badges hosted by 
+  [shields.io](https://shields.io/). 
+  
+  You may not understand what they all represent now, but you will in time.
+      
+  ## Languages 
+     
+      
+[image]({BadgeURLHere})
+      https://img.shields.io/badge/JSS-F7DF1E?style=for-the-badge&logo=JSS&logoColor=white
+      
+  ## Features
+      
+  If your project has a lot of features, list them here.
+      
+      ## How to Contribute
+      
+ 
+      
+  ## Tests
+      We haven't used any testing libraries yet but this is something we plan to add in the future, but of you are familiar with one it's feel free to fork and add one.
+

@@ -15,7 +15,6 @@ export const useGet = () => {
     const {data: movies, isLoading} = useQuery({
         queryFn: async () => {
             const {data} = await axios.request(options)
-            console.log(data);
             return data
         },
         queryKey: ['reccomendations']
