@@ -1,6 +1,6 @@
 // import React from 'react'
-import { Link, NavLink, Outlet } from "react-router-dom";
-import Capture from "../assets/Capture.png";
+import { NavLink, Outlet } from "react-router-dom";
+import Capture from "../assets/images/logo/Capture.png";
 function Navbar() {
   return (
     <header>

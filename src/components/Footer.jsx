@@ -1,5 +1,5 @@
 import React from "react";
-import Capture  from '../assets/Capture.png';
+import Capture  from '../assets/images/logo/Capture.png';
 
 function Footer() {
     return (
