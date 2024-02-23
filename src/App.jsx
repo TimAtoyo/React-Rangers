@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 import './App.css'
 import Navbar from './components/Navbar'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom' 
-import FiltersForm from './components/FiltersForm'
-import MovieDetailsResult from './components/MovieDetailsResult'
+import FiltersForm from './components/filters/FiltersForm'
+import MovieDetailsResult from './components/movie-details/MovieDetailsResult'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 
 

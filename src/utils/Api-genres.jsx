@@ -13,8 +13,6 @@ const GetGenres = async () => {
                 'Accept': 'application/json'
             }
         });
-        console.log(response.data);
-        console.log(response.data.genres[0].name);
         return response.data;
     } catch (error) {
         console.error('Error fetching data:', error);

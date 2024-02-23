@@ -2,17 +2,16 @@ import React from 'react';
  // Importing the image
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import appLogo from '../images/app-logo.jpeg';
-import logo from '../assets/Capture.png';
-import heroImage1 from '../images/godfather-image.jpeg';
-import heroImage2 from '../images/htf.jpeg';
-import heroImage3 from '../images/boyhood.jpg';
-import heroImage4 from '../images/legally-blonde.jpg';
-import heroImage5 from '../images/la-haine.jpeg';
-import heroImage6 from '../images/gladiator.jpeg';
-import heroImage7 from '../images/perks-wallflower.jpg';
-import heroImage8 from '../images/titanic.jpg';
-import heroImage9 from '../images/past-lives.jpeg';
+import logo from '../assets/images/logo/Capture.png';
+import heroImage1 from '../assets/images/hero/godfather-image.jpeg';
+import heroImage2 from '../assets/images/hero/htf.jpeg';
+import heroImage3 from '../assets/images/hero/boyhood.jpg';
+import heroImage4 from '../assets/images/hero/legally-blonde.jpg';
+import heroImage5 from '../assets/images/hero/la-haine.jpeg';
+import heroImage6 from '../assets/images/hero/gladiator.jpeg';
+import heroImage7 from '../assets/images/hero/perks-wallflower.jpg';
+import heroImage8 from '../assets/images/hero/titanic.jpg';
+import heroImage9 from '../assets/images/hero/past-lives.jpeg';
 
 function Hero () {
     return (

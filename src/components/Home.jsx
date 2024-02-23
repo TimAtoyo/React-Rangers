@@ -1,10 +1,10 @@
 import  { useState } from 'react'
-import SingleCardResult from './SingleCardResult'
-import SearchForm from './SearchForm'
+import SingleCardResult from './search/SingleCardResult'
+import SearchForm from './search/SearchForm'
 import Api from '../utils/Api'
 import Hero from './Hero'
 import {  useGetGenre } from '../hooks/useGetGenre'
-import MovieReccomendations from './MovieReccomendations'
+import MovieReccomendations from './recommendations/MovieReccomendations'
 
 function Home() {
   const [searchData, setSearchData] = useState({

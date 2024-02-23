@@ -76,14 +76,8 @@
   color: #fff;
 }
 
-/* Movie details page */
 
-.backdrop {
-  height: 50vh;
-  width: 100%;
-  object-fit: cover;
-}
-
+/* Transition */
 
 .recc {
   transition: all 2s;
