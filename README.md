@@ -62,4 +62,4 @@ We haven't used any testing libraries yet but this is something we plan to add i
 
 ## Deployed Site
 
-[Movie Raider](reactrangers.netlify.app/)
+[Movie Raider](https://reactrangers.netlify.app/)
